@@ -16,6 +16,9 @@ public interface PersonDAO extends CrudRepository<Person, Long> {
     public List<Person> findAllPersons();
 	@Query("SELECT p FROM Person p where p.id = :id")
     public Optional<Person> findIdInPerson(@Param("id") Long id);
+	
+	@Query("SELECT p FROM Person p where fullName LIKE 'S%'")
+	public List<Person> findNameStartingByS();
     
     public List<Person> findByFullNameLike(String name);
  
