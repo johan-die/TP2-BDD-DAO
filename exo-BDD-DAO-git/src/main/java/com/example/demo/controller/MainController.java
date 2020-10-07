@@ -52,6 +52,9 @@ public class MainController {
 		case "startS":
 			all = (List<Person>) personDAO.findNameStartingByS();
 			break;
+		case "startWith":
+			all = (List<Person>) personDAO.findByFullNameStartingWith(value);
+			break;
 
 		default:
 			System.out.println("not supported: " + method);

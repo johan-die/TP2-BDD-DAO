@@ -21,6 +21,8 @@ public interface PersonDAO extends CrudRepository<Person, Long> {
 	public List<Person> findNameStartingByS();
     
     public List<Person> findByFullNameLike(String name);
+    
+    public List<Person> findByFullNameStartingWith(String name);
  
     public List<Person> findBySalaryGreaterThan(Float f);
  
